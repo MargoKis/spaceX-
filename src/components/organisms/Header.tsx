@@ -5,12 +5,12 @@ import styled from "styled-components";
 import Logo from "../assets/svg/logo.svg";
 
 const Header = () => {
-  const CommonContainer = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 40%;
-    margin: 0 5%;
-  `;
+  // const CommonContainer = styled.div`
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 40%;
+  //   margin: 0 10% 0 5%;
+  // `;
 
   const HeaderWrap = styled.header`
     display: flex;
@@ -24,6 +24,7 @@ const Header = () => {
 
   const LogoX = styled.img`
     mix-blend-mode: difference;
+    margin-left: 7%;
   `;
 
   const Nav = styled.nav`
@@ -62,6 +63,7 @@ a {
   const ButtonsWrap = styled.div`
     display: flex;
     gap: 8%;
+    margin-right: 7%;
   `;
 
   const ButtonSignIn = styled.button`
@@ -87,7 +89,7 @@ a {
 
   return (
     <HeaderWrap>
-      <CommonContainer>
+      {/* <CommonContainer> */}
         <LogoX src={Logo} alt="logo spaceX" />
         <Nav>
           <ul>
@@ -111,7 +113,7 @@ a {
           </ButtonFav>
           <ButtonSignIn>Sign In</ButtonSignIn>
         </ButtonsWrap>
-      </CommonContainer>
+      {/* </CommonContainer> */}
     </HeaderWrap>
   );
 };

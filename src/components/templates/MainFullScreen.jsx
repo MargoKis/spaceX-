@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from 'react-scroll';
 import BackGroundImgEarth from "../assets/png/backImgEarth.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -74,6 +75,13 @@ const MainFullScreen = () => {
         <FirstLineOfTitle>The space is waiting for</FirstLineOfTitle>
         <SecondLineOfTitle>You</SecondLineOfTitle>
       </TitleWrap>
+      <Link
+      to="popularToursSection"
+      spy={true}
+      smooth={true}
+      offset={-100} 
+      duration={500} 
+    >
       <ExploreTourWrap>
         <ExploreTourText>Explore tours</ExploreTourText>
         <FontAwesomeIcon
@@ -82,6 +90,7 @@ const MainFullScreen = () => {
           style={{ color: "white" }}
         />
       </ExploreTourWrap>
+      </Link>
     </MainWrap>
   );
 };
