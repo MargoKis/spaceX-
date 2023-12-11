@@ -1,11 +1,11 @@
 import React from 'react'
-import MainFullScreen from '../templates/MainFullScreen'
-import PopularTours from '../templates/PopularTours'
+import HomeFullScreen from '../templates/HomeSlideImg'
+import PopularTours from '../templates/HomePopularTours'
 
 const Home = () => {
   return (
     <div>
-        <MainFullScreen/>
+        <HomeFullScreen/>
         <PopularTours/>
     </div>
   )
