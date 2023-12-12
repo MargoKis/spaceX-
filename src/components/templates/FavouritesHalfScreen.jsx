@@ -34,7 +34,7 @@ const FavouritesHalfScreen = () => {
   return (
     <>
     <MainWrap>
-        <Header />
+        <Header variant='PinkLike'/>
         <TitleWrap>
             <Title>Favourites</Title>
         </TitleWrap>

@@ -41,11 +41,6 @@
 
 // export default CardList;
 
-
-
-
-
-
 // import React from "react";
 // import { useQuery, gql } from "@apollo/client";
 // import styled from "styled-components";
@@ -89,11 +84,6 @@
 
 // export default CardList;
 
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { useQuery, gql } from "@apollo/client";
 import styled from "styled-components";
@@ -112,8 +102,8 @@ const GET_ROCKETS = gql`
 const CardsWrap = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 0 6%;
+  justify-content: space-between;
+  margin: 0 7%;
 `;
 
 const CardList = ({ currentPage }) => {
@@ -143,7 +133,7 @@ const CardList = ({ currentPage }) => {
     <>
       <CardsWrap>
         {limitedRockets.map((rocket, index) => (
-          <Card key={rocket.id} rocket={rocket} image={images[index]}/>
+          <Card key={rocket.id} rocket={rocket} image={images[index]} />
         ))}
       </CardsWrap>
     </>
@@ -151,4 +141,3 @@ const CardList = ({ currentPage }) => {
 };
 
 export default CardList;
-

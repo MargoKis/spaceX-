@@ -104,16 +104,14 @@
 
 
 import React from "react";
-import styled,  { keyframes } from "styled-components";
+import { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import { Link } from 'react-scroll';
-import BackGroundImgEarth from "../assets/png/backImgEarth.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Header from "../organisms/Header";
- import { useState, useEffect } from "react";
 import ImageOne from "../assets/png/backImgEarth.png";
 import ImageTwo from "../assets/png/backImgWoman.png";
 import ImageThree from "../assets/png/backImgSpaceMan.png";
+import ArrowDown from "../assets/svg/arrowDown.svg"
 
 const images = [ImageOne, ImageTwo, ImageThree];
 
@@ -197,6 +195,10 @@ const ExploreTourText = styled.p`
   color: white;
 `;
 
+const ArrowDownImg = styled.img`
+  fill: white;
+`
+
 const HomeFullScreen = () => {
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -222,25 +224,21 @@ const HomeFullScreen = () => {
 
   return (
     <MainWrap style={{ backgroundImage: `url(${images[currentImage]})` }}>
-      <Header />
+      <Header variant='GrayLike'/>
       <TitleWrap>
       <FirstLineOfTitle>The space is waiting for</FirstLineOfTitle>
       <SecondLineOfTitle>You</SecondLineOfTitle>
     </TitleWrap>
       <Link
-      to="popularToursSection"
+      to="PopularTours"
       spy={true}
       smooth={true}
-      offset={100} 
+      offset={0} 
       duration={500} 
     >
       <ExploreTourWrap>
         <ExploreTourText>Explore tours</ExploreTourText>
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          size="2x"
-          style={{ color: "white" }}
-        />
+        <ArrowDownImg src={ArrowDown} alt='arrow down'/>
       </ExploreTourWrap>
       </Link>
     </MainWrap>

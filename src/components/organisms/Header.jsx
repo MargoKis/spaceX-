@@ -59,7 +59,7 @@ const ButtonsWrap = styled.div`
   margin-right: 7%;
 `;
 
-const Header = () => {
+const Header = ({ variant }) => {
   return (
     <HeaderWrap>
       <Link to="/">
@@ -83,7 +83,7 @@ const Header = () => {
       </Nav>
       <ButtonsWrap>
         <Link to="/favourites">
-          <ButtonStyled variant="GrayLike">
+          <ButtonStyled variant={variant}>
             <img src={Heart} alt="heart icon" />
           </ButtonStyled>
         </Link>
