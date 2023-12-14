@@ -33,23 +33,23 @@ const ButtonArrow = styled.button`
   cursor: pointer;
 `;
 
-const  HomePopularTours = () => {
-  const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = 2; 
+const HomePopularTours: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState<number>(0);
+  const totalPages: number = 2;
 
   const handleClickLeft = () => {
-    const nextPage = (currentPage - 1 + totalPages) % totalPages;
+    const nextPage: number = (currentPage - 1 + totalPages) % totalPages;
     setCurrentPage(nextPage);
   };
-  
+
   const handleClickRight = () => {
-    const nextPage = (currentPage + 1) % totalPages;
+    const nextPage: number = (currentPage + 1) % totalPages;
     setCurrentPage(nextPage);
   };
 
   return (
     <>
-      <PopularToursWrap name="PopularTours">
+      <PopularToursWrap id='HomePopularTours'>
         <PopularToursText>Popular Tours</PopularToursText>
         <ButtonsWrap>
           <ButtonArrow onClick={handleClickLeft}>
@@ -66,4 +66,3 @@ const  HomePopularTours = () => {
 };
 
 export default HomePopularTours;
-

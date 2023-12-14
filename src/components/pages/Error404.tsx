@@ -11,25 +11,23 @@ const ErrorWrap = styled.div`
   text-align: center;
 `;
 
-const Error = styled.div`
+const ErrorText = styled.div`
   font-weight: 400;
   color: gray;
   font-size: 28px;
   margin-bottom: 30px;
 `;
 
-const Error404 = () => {
+const Error404: React.FC = () => {
   return (
-    <>
-      <ErrorWrap>
-        <Error>
-          Opps, this page doesn't exist, but you can return on home page
-        </Error>
-        <Link to="/">
-          <ButtonStyled variant="Buy">Return home</ButtonStyled>
-        </Link>
-      </ErrorWrap>
-    </>
+    <ErrorWrap>
+      <ErrorText>
+        Opps, this page doesn't exist, but you can return to the home page
+      </ErrorText>
+      <Link to="/">
+        <ButtonStyled variant="Buy">Return home</ButtonStyled>
+      </Link>
+    </ErrorWrap>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useReactiveVar } from "@apollo/client";
 import { favouritesVar } from "../apollo/Cache";
-import Card from "../organisms/Card";
+import Card from "../molecules/Card";
 
 const ClearAllWrap = styled.div`
   display: flex;
@@ -40,9 +40,9 @@ const FavouritesCards = () => {
         <ClearAll onClick={handleClearAll}>Clear All</ClearAll>
       </ClearAllWrap>
       <LikedCardsWrap>
-        {favouriteCards.map((card, index) => (
+        {favouriteCards.map((card, description) => (
           <Card
-            key={index}
+            key={description}
             rocket={card.rocket}
             image={card.image}
             isDelete={true}
@@ -54,3 +54,7 @@ const FavouritesCards = () => {
 };
 
 export default FavouritesCards;
+
+
+
+

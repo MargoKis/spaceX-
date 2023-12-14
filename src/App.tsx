@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.css'; 
-import Home from './components/pages/Home';
-import Favourites from './components/pages/Favourites';
-import Error404 from './components/pages/Error404';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./index.css";
+import Home from "./components/pages/Home";
+import Favourites from "./components/pages/Favourites";
+import Error404 from "./components/pages/Error404";
 
 const App: React.FC = () => {
   return (

@@ -230,7 +230,7 @@ const HomeFullScreen = () => {
       <SecondLineOfTitle>You</SecondLineOfTitle>
     </TitleWrap>
       <Link
-      to="PopularTours"
+      to="HomePopularTours"
       spy={true}
       smooth={true}
       offset={0} 

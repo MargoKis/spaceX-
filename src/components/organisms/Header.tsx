@@ -25,11 +25,7 @@ const Nav = styled.nav`
     list-style: none;
     display: flex;
     gap: 32px;
-  a {
-    text-decoration: none; 
-    color: white; 
-    text-transform: uppercase;
-}
+  }
 `;
 
 const NavLinkStyled = styled(Link)`
@@ -59,7 +55,11 @@ const ButtonsWrap = styled.div`
   margin-right: 7%;
 `;
 
-const Header = ({ variant }) => {
+type HeaderProps = {
+  variant: string;
+};
+
+const Header: React.FC<HeaderProps> = ({ variant }) => {
   return (
     <HeaderWrap>
       <Link to="/">
