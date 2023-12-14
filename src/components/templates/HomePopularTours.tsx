@@ -49,7 +49,7 @@ const HomePopularTours: React.FC = () => {
 
   return (
     <>
-      <PopularToursWrap id='HomePopularTours'>
+      <PopularToursWrap id="HomePopularTours">
         <PopularToursText>Popular Tours</PopularToursText>
         <ButtonsWrap>
           <ButtonArrow onClick={handleClickLeft}>

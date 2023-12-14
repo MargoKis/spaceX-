@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Heart from "../assets/svg/heart.svg";
-import Delete from "../assets/svg/trash.svg"
+import Delete from "../assets/svg/trash.svg";
 import ButtonStyled from "../atoms/Button";
-import { favouritesVar } from '../apollo/Cache';
+import { favouritesVar } from "../apollo/Cache";
 
 const CardWrap = styled.div`
   display: flex;
@@ -52,13 +52,15 @@ const ButtonsWrap = styled.div`
 const Card = ({ rocket, image, isDelete }) => {
   const handleLikeClick = () => {
     const currentFavourites = favouritesVar();
-    const isAlreadyFavourite = currentFavourites.some((fav) => fav.image === image);
-  
+    const isAlreadyFavourite = currentFavourites.some(
+      (fav) => fav.image === image
+    );
+
     if (!isAlreadyFavourite) {
       favouritesVar([...currentFavourites, { rocket, image }]);
     }
   };
-  
+
   const handleDeleteClick = () => {
     favouritesVar(favouritesVar().filter((fav) => fav.image !== image));
   };
@@ -79,7 +81,7 @@ const Card = ({ rocket, image, isDelete }) => {
             <img src={Delete} alt="trash icon" />
           </ButtonStyled>
         ) : (
-          <ButtonStyled variant="GrayLike" onClick={handleLikeClick} >
+          <ButtonStyled variant="GrayLike" onClick={handleLikeClick}>
             <img src={Heart} alt="heart icon" />
           </ButtonStyled>
         )}
@@ -89,8 +91,3 @@ const Card = ({ rocket, image, isDelete }) => {
 };
 
 export default Card;
-
-
-
-
-

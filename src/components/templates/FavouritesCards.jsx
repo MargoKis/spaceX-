@@ -21,11 +21,11 @@ const ClearAll = styled.div`
 `;
 
 const LikedCardsWrap = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 4% 7%;
-`
+`;
 
 const FavouritesCards = () => {
   const favouriteCards = useReactiveVar(favouritesVar);
@@ -54,7 +54,3 @@ const FavouritesCards = () => {
 };
 
 export default FavouritesCards;
-
-
-
-
